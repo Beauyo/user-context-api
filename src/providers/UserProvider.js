@@ -5,11 +5,12 @@ const UserContext = React.createContext()
 export const UserConsumer = UserContext.Consumer
 
 class UserProvider extends React.Component {
-    state ={ 
+    state = { 
         email: 'bleepblopp@hotmail.com',
         firstName: "bleep",
         lastName: "bloop",
-        age: "344"
+        age: "344",
+        updateUser: (user) => this.updateUser(user),
 
     }
 

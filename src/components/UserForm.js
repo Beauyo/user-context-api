@@ -2,7 +2,7 @@ import React from 'react'
 import { Form } from 'semantic-ui-react'
 import { UserConsumer } from '../providers/UserProvider'
 
-class UserForm extends React.Conponent {
+class UserForm extends React.Component {
     state = { email: '', firstName: '', lastName: '', age: ''}
 
     handleChange = ( e, { name, value }) => this.setState({ [name]: value })
@@ -58,6 +58,7 @@ const ConnectedUserForm = (props) => {
                 firstName={value.firstName}
                 lastName={value.lastName}
                 age={value.age}
+                updateUser={value.updateUser}
                 />
             )}
         </UserConsumer>
